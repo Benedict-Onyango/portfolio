@@ -1,0 +1,55 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.47);
+  background: rgba(0, 0, 0, 0.37);
+  padding: 0.5rem 8px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer .left {
+  font-size: 0.85rem;
+}
+.middle .nav_list {
+  display: flex;
+  gap: clamp(5px, 4vw + 1rem, 20px);
+  margin: 0;
+}
+
+.middle .nav_list li {
+  list-style: none;
+}
+
+.middle .nav_list a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+footer .right {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+footer .right button {
+  background-color: transparent;
+  color: currentColor;
+  border-radius: 30px;
+  white-space: nowrap;
+  border: 2px currentColor solid;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+
+footer .right:hover button{
+    background: rgba(255, 255, 255, 0.47);
+    color: rgba(0, 0, 0, 0.37);
+    cursor: pointer;
+  }
+
