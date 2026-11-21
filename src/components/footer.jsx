@@ -8,13 +8,13 @@ export function Footer() {
 
       <div className="right">
         <a href="https://github.com/Benedict-Onyango">
-          <i class="fa-brands fa-github"></i>
+          <i className="fa-brands fa-github"></i>
         </a>
         <a href="https://www.linkedin.com/in/benedict-onyango-153958340/">
-          <i class="fa-brands fa-linkedin-in"></i>
+          <i className="fa-brands fa-linkedin-in"></i>
         </a>
         <a href="https://www.instagram.com/_.ben.e_/">
-          <i class="fa-brands fa-instagram"></i>
+          <i className="fa-brands fa-instagram"></i>
         </a>
       </div>
     </footer>

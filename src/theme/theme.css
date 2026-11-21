@@ -16,6 +16,9 @@
   --accent: #d4a03c;
   --border: #2a2e36;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
