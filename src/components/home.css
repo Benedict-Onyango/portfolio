@@ -37,13 +37,13 @@ section.home{
     color: var(--muted); 
 }
 .section_text_p2{
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem , 4vw,1.75rem);
     margin: 1rem auto;
     color: var(--muted); 
 }
 
 .title{
-    font-size: 2rem;
+    font-size: clamp(1.5rem , 4vw,2rem);
     text-align: center;
     margin: 0;
 }
