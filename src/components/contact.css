@@ -168,13 +168,9 @@
   margin: 0;
 }
 
-.form_status.success {
+.success {
   font-size: 0.7rem;
   color: #2e9d57;
-}
-.form_status.error {
-  font-size: 0.7rem;
-  color: #d6453d;
 }
 
 @media (max-width: 800px) {

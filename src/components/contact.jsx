@@ -1,5 +1,7 @@
-import "./contact.css";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import "./contact.css";
 
 export function Contact() {
   const {
@@ -8,11 +10,30 @@ export function Contact() {
     reset,
     formState: { isSubmitting, isSubmitSuccessful, errors },
   } = useForm();
+
   const EMAIL = "benedictonyango0@gmail.com";
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
+  const [isCopied, setIsCopied] = useState(false);
+  const [error, setError] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(EMAIL);
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
+  };
+
+  const onSubmit = async (data) => {
+    try {
+      await axios.post("http://127.0.0.1:8000/api/contact/", data);
+      reset();
+    } catch (error) {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
+    }
   };
 
   return (
@@ -25,7 +46,9 @@ export function Contact() {
         </p>
         <div className="mail_to">
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          <button>Copy</button>
+          <button onClick={copyEmail}>
+            {isCopied ? "Email Copied" : "Copy Email"}
+          </button>
         </div>
         <div className="quick_links">
           <a href="https://github.com/Benedict-Onyango">GitHub</a>
@@ -114,12 +137,22 @@ export function Contact() {
         </div>
         {isSubmitSuccessful && (
           <p
-            className={`form_status ${isSubmitSuccessful ? "success" : "error"}`}
+            className="success"
             id="form-status"
             role="status"
             aria-live="polite"
           >
             Message Sent
+          </p>
+        )}
+        {error && (
+          <p
+            className="errors"
+            id="form-status"
+            role="status"
+            aria-live="polite"
+          >
+            Failed to send Message
           </p>
         )}
       </form>
