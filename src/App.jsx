@@ -8,13 +8,15 @@ import { About } from "./components/about";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import "./App.css";
+import { Skills } from "./components/skills";
 
 function App() {
   return (
     <>
       <Header />
       <Home />
-      <About/>
+      <About />
+      <Skills/>
       <Contact />
       <Footer />
     </>
