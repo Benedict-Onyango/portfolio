@@ -7,8 +7,9 @@ import { Home } from "./components/home";
 import { About } from "./components/about";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
-import "./App.css";
 import { Skills } from "./components/skills";
+import { Projects } from "./components/projects";
+import "./App.css";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Home />
       <About />
       <Skills/>
+      <Projects/>
       <Contact />
       <Footer />
     </>
