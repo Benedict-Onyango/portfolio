@@ -4,6 +4,7 @@ import axios from "axios";
 import "./contact.css";
 
 export function Contact() {
+  const FORM_ENDPOINT="http://127.0.0.1:8000/api/contact/"
   const {
     register,
     handleSubmit,
@@ -26,7 +27,7 @@ export function Contact() {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://127.0.0.1:8000/api/contact/", data);
+      await axios.post(FORM_ENDPOINT, data);
       reset();
     } catch (error) {
       setError(true);
