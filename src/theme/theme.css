@@ -1,7 +1,7 @@
 /* Theme variables */
 :root[data-theme="light"] {
   --bg: #faf8f5;
-  --surface: #efebe4;
+  --surface: #efebe45f;
   --text: #1c1c1c;
   --muted: #5f6368;
   --accent: #b7791f; /* darker amber for contrast on light */
@@ -10,7 +10,7 @@
 
 :root[data-theme="dark"] {
   --bg: #0f1115;
-  --surface: #1a1d23;
+  --surface: #1a1d235f;
   --text: #e6e6e6;
   --muted: #9aa0a6;
   --accent: #d4a03c;
@@ -39,10 +39,21 @@ footer {
   padding: 0.5rem 5%;
   margin: 8px;
   border-radius: 10px;
+  backdrop-filter: blur(12px);
+}
+header{
+  position: sticky;
+  top: 0;
+  margin:0;
+  border-radius: 0;
+}
+header.stuck{
+  padding: 0.1rem 5%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 footer {
   padding: 0.5rem 8px;
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   right: 0;
