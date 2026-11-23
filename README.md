@@ -3,7 +3,7 @@
 My personal portfolio site. I'm a software engineering student at Multimedia University of Kenya (graduating November 2028). I build full-stack web apps and explore machine learning on the side.
 
 
-**Live site:** <!-- Coming soon -->
+**Live site:** https://benedict-onyango.vercel.app/
 
 ## Features
 
@@ -126,3 +126,7 @@ const FORM_ENDPOINT = "https://127.0.0.1/api/contact/";
 ## Contact
 
 [Email](benedictonayngo0@gamil.com) · [GitHub](https://github.com/Benedict-Onyango) · [LinkedIn](linkedin.com/in/benedict-onyango-153958340)
+
+
+<img width="945" height="440" alt="Screenshot 2026-11-23 172956" src="https://github.com/user-attachments/assets/b0523af6-60d0-4c06-89d8-825e437e5aa3" />
+<img width="936" height="437" alt="Screenshot 2026-11-23 173003" src="https://github.com/user-attachments/assets/c2e736e2-836e-4132-99c4-914e0890f64c" />
