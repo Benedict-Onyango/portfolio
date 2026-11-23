@@ -1,4 +1,4 @@
-import me from "../assets/me.png";
+import me from "../assets/me.jpeg";
 import resume from "../assets/Resume.pdf";
 import "./home.css"
 
