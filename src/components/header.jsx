@@ -5,6 +5,7 @@ import ThemeToggle from "../theme/ThemeToggle";
 export function Header() {
   const sentinelRef = useRef(null);
   const [stuck, setStuck] = useState(false);
+  const [sideBar, setSideBar] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) =>
@@ -13,6 +14,10 @@ export function Header() {
     observer.observe(sentinelRef.current);
     return () => observer.disconnect();
   }, []);
+
+  const toggleSideBar = () => {
+    setSideBar((prev) => !prev);
+  };
   return (
     <>
       <div ref={sentinelRef} style={{ height: 1 }} />
@@ -46,7 +51,46 @@ export function Header() {
           </ul>
           <ThemeToggle />
         </div>
+        <div
+          className={`hamburger_menu ${sideBar ? "active" : ""}`}
+          onClick={toggleSideBar}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </header>
+
+      <nav className={`small_screen ${sideBar ? "active" : ""}`}>
+        <ul className="nav_list">
+          <li>
+            <a href="#home" onClick={toggleSideBar}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={toggleSideBar}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#skills" onClick={toggleSideBar}>
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={toggleSideBar}>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={toggleSideBar}>
+              Contact
+            </a>
+          </li>
+        </ul>
+        <ThemeToggle onClick={toggleSideBar} />
+      </nav>
     </>
   );
 }
