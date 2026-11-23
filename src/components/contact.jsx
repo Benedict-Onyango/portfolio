@@ -4,7 +4,7 @@ import axios from "axios";
 import "./contact.css";
 
 export function Contact() {
-  const FORM_ENDPOINT="http://127.0.0.1:8000/api/contact/"
+  const FORM_ENDPOINT = "http://127.0.0.1:8000/api/contact/";
   const {
     register,
     handleSubmit,
@@ -52,8 +52,18 @@ export function Contact() {
           </button>
         </div>
         <div className="quick_links">
-          <a href="https://github.com/Benedict-Onyango">GitHub</a>
-          <a href="https://www.linkedin.com/in/benedict-onyango-153958340/">
+          <a
+            href="https://github.com/Benedict-Onyango"
+            target="_blank"
+            rel="noopener noreferrer "
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/benedict-onyango-153958340/"
+            target="_blank"
+            rel="noopener noreferrer "
+          >
             LinkedIn
           </a>
         </div>

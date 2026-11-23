@@ -39,7 +39,7 @@ export function About() {
           <p>
             On the side, I explore <strong>machine learning</strong>, and I'm
             interested in how it can make everyday apps smarter and more useful.
-            {/* TODO: add one real example later*/}
+            {/*add one real example later*/}
           </p>
 
           <p>

@@ -1,6 +1,6 @@
 import me from "../assets/me.jpeg";
 import resume from "../assets/Resume.pdf";
-import "./home.css"
+import "./home.css";
 
 export function Home() {
   return (
@@ -21,10 +21,18 @@ export function Home() {
           </a>
         </div>
         <div className="social_container">
-          <a href="https://github.com/Benedict-Onyango">
+          <a
+            href="https://github.com/Benedict-Onyango"
+            target="_blank"
+            rel="noopener noreferrer "
+          >
             <i className="fa-brands fa-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/benedict-onyango-153958340/">
+          <a
+            href="https://www.linkedin.com/in/benedict-onyango-153958340/"
+            target="_blank"
+            rel="noopener noreferrer "
+          >
             <i className="fa-brands fa-linkedin-in"></i>
           </a>
         </div>
