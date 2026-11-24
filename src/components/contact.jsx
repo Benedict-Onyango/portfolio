@@ -4,7 +4,7 @@ import axios from "axios";
 import "./contact.css";
 
 export function Contact() {
-  const FORM_ENDPOINT = "http://127.0.0.1:8000/api/contact/";
+   const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
   const {
     register,
     handleSubmit,
@@ -27,7 +27,7 @@ export function Contact() {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post(FORM_ENDPOINT, data);
+      await axios.post(`${API_URL}/api/contact/`, data);
       reset();
     } catch (error) {
       setError(true);
