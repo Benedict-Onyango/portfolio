@@ -22,8 +22,8 @@ const PROJECTS = [
     image: "/images/calvo.png",
     image_alt: "Sales screen of the supermarket POS system",
     tags: ["React", "Python", "Django", "PostgreSQl"],
-    github: "https://github.com/Benedict-Onyango/Calvo_auto_locks",
-    demo: null,
+    github: "https://github.com/Benedict-Onyango/CalvoAutoLocks",
+    demo: "https://calvo-auto-locks.vercel.app"/,
   },
 ];
 
